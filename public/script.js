@@ -6,11 +6,12 @@ const messagesDiv = document.getElementById("messages");
 
 function joinChat() {
   const username = document.getElementById("username").value.trim();
-  if (!username) return;
+  if (!username) return alert("Enter username");
 
   socket.emit("join", username);
-  joinScreen.classList.add("hidden");
-  chatScreen.classList.remove("hidden");
+
+  joinScreen.style.display = "none";
+  chatScreen.style.display = "flex";
 }
 
 function sendMessage() {
