@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="join-screen" id="joinScreen">
+  <h2>Join Chat</h2>
+  <input id="username" placeholder="Enter your name" />
+  <button onclick="joinChat()">Join</button>
+</div>
+
+<div class="chat-screen hidden" id="chatScreen">
+  <header>💬 Live Chat</header>
+
+  <div id="messages"></div>
+
+  <div class="input-area">
+    <input id="messageInput" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
